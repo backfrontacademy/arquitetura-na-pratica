@@ -95,8 +95,20 @@
 				C46AC2A640EDE6EC6886AE7F /* Pods-SwiftArquiteturas.debug.xcconfig */,
 				10D2A91C79826C9BAAC5DBD8 /* Pods-SwiftArquiteturas.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		99DF8BEF28C906240097EE16 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				99EE10D428C9043C002A823D /* AppDelegate.swift */,
+				99EE10D628C9043C002A823D /* SceneDelegate.swift */,
+				99EE10D828C9043C002A823D /* ViewController.swift */,
+				99EE10DA28C9043C002A823D /* Main.storyboard */,
+				99EE10DD28C9043D002A823D /* Assets.xcassets */,
+				99EE10DF28C9043D002A823D /* LaunchScreen.storyboard */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		99EE10C828C9043B002A823D = {
@@ -124,12 +136,7 @@
 		99EE10D328C9043C002A823D /* SwiftArquiteturas */ = {
 			isa = PBXGroup;
 			children = (
-				99EE10D428C9043C002A823D /* AppDelegate.swift */,
-				99EE10D628C9043C002A823D /* SceneDelegate.swift */,
-				99EE10D828C9043C002A823D /* ViewController.swift */,
-				99EE10DA28C9043C002A823D /* Main.storyboard */,
-				99EE10DD28C9043D002A823D /* Assets.xcassets */,
-				99EE10DF28C9043D002A823D /* LaunchScreen.storyboard */,
+				99DF8BEF28C906240097EE16 /* Source */,
 				99EE10E228C9043D002A823D /* Info.plist */,
 			);
 			path = SwiftArquiteturas;
