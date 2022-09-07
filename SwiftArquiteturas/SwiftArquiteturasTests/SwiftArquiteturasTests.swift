@@ -18,6 +18,39 @@ class SwiftArquiteturasTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    func testRegister() {
+        var userModel = UserModel()
+        
+        let exp = expectation(description: "Check Login is successful")
+            let manager = UserManager(business: UserBusiness())
+            
+            manager.register(email: "teste@teste.com",
+                             password: "a12345") { userM in
+                print(userM)
+                userModel = userM
+            } failureHandler: { error in
+                print(error)
+            }
+        
+        waitForExpectations(timeout: 30) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
+            }
+            XCTAssertEqual(userModel != nil, true)
+        }
+    }
+    
+//    func testLogin() throws {
+//        let manager = UserManager(business: UserBusiness())
+//
+//        manager.login(email: "teste@teste.com",
+//                      password: "a12345") { userModel in
+//            print(userModel)
+//        } failureHandler: { error in
+//            print(error)
+//        }
+//    }
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
